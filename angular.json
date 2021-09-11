@@ -10,8 +10,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true,
+          "inlineTemplate": false,
+          "inlineStyle": false,
           "skipTests": true
         },
         "@schematics/angular:class": {
@@ -53,9 +53,12 @@
               "src/assets"
             ],
             "styles": [
+              "src/lib/bootstrap-5.0.2/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/lib/bootstrap-5.0.2/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
