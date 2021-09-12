@@ -1,0 +1,19 @@
+.footer {
+    background-color: #333;
+    color: #ccc;
+    height: 5%;
+    position: fixed;
+    bottom: 0;
+    justify-content: flex-end;
+    font-size: 1rem;
+    padding-top: 0.8%;
+}
+
+p {
+    text-align: center;
+    justify-content: center;
+}
+
+.fa-copyright {
+    font-size: 0.8rem;
+}
