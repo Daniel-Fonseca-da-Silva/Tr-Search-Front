@@ -1,87 +1,96 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-6">
-      <div class="container">
-        <p class="fs-3 earch-text1">Buscar</p>
-      </div>
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="col-md-6">
-          <label for="validationCustom01" class="form-label">Nome</label>
-          <input
-            type="text"
-            class="form-control"
-            id="validationCustom01"
-            value="Padaria Doce"
-            required
-          />
-          <div class="valid-feedback">Looks good!</div>
-        </div>
-        <div class="col-md-6">
-          <label for="validationCustom02" class="form-label">Cidade</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected value="">Três Rios</option>
-            <option disabled>Paraiba do Sul</option>
-          </select>
-          <div class="invalid-feedback">Please select a valid state.</div>
-        </div>
-        <div class="col-md-6">
-          <label for="validationCustom02" class="form-label">Categoria</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected value="">Lanchonete</option>
-            <option>Padaria</option>
-            <option>Pet-Shop</option>
-            <option>Bar</option>
-            <option>Agro</option>
-            <option>Mercado</option>
-            <option>Construção</option>
-            <option>Drogaria</option>
-          </select>
-          <div class="invalid-feedback">Please select a valid state.</div>
-        </div>
-        <div class="col-md-6">
-          <label for="validationCustom02" class="form-label">Bairro</label>
-          <select class="form-select" id="validationCustom04" required>
-            <option selected value="">Centro</option>
-            <option>Boa União</option>
-            <option>Cidade Nova</option>
-            <option>Santa Terezinha</option>
-            <option>Monte Castelo</option>
-            <option>Purys</option>
-            <option>Mirante Sul</option>
-            <option>Santa Rosa</option>
-          </select>
-          <div class="invalid-feedback">Please select a valid state.</div>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Procurar</button>
-        </div>
-      </form>
+  <div class="container">
+    <p class="fs-3 search-text1 text-center">Buscar</p>
+  </div>
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-6">
+      <label for="validationCustom01" class="form-label">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustom01"
+        value="Padaria Doce"
+        required
+      />
+      <div class="valid-feedback">Looks good!</div>
     </div>
-    <div class="col-6">
-      <div class="container">
-        <p class="fs-4 earch-text1">Resultado</p>
-      </div>
+    <div class="col-md-6">
+      <label for="validationCustom02" class="form-label">Cidade</label>
+      <select class="form-select" id="validationCustom04" required>
+        <option selected value="">Três Rios</option>
+        <option disabled>Paraiba do Sul</option>
+      </select>
+      <div class="invalid-feedback">Please select a valid state.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom02" class="form-label">Categoria</label>
+      <select class="form-select" id="validationCustom04" required>
+        <option selected value="">Lanchonete</option>
+        <option>Padaria</option>
+        <option>Pet-Shop</option>
+        <option>Bar</option>
+        <option>Agro</option>
+        <option>Mercado</option>
+        <option>Construção</option>
+        <option>Drogaria</option>
+      </select>
+      <div class="invalid-feedback">Please select a valid state.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom02" class="form-label">Bairro</label>
+      <select class="form-select" id="validationCustom04" required>
+        <option selected value="">Centro</option>
+        <option>Boa União</option>
+        <option>Cidade Nova</option>
+        <option>Santa Terezinha</option>
+        <option>Monte Castelo</option>
+        <option>Purys</option>
+        <option>Mirante Sul</option>
+        <option>Santa Rosa</option>
+      </select>
+      <div class="invalid-feedback">Please select a valid state.</div>
+    </div>
+    <div class="container">
+      <button class="btn btn-success" type="submit">Buscar</button>
+      <button class="btn btn-danger" type="button">Limpar</button>
+    </div>
+  </form>
+</div>
+<div class="container">
+  <p class="fs-3 search-text1 text-center">Resultado</p>
+</div>
 
-      <div class="card mb-3" style="max-width: 500px">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="..." />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
-            </div>
-          </div>
+<div class="container-fluid">
+  <div class="card-header text-center">
+    Estabelecimento
+  </div>
+  <div class="card-body">
+    <h5 class="card-title text-center">Supermais</h5>
+    <p class="card-text text-center">Mercado de alimentação em geral</p>
+    <div class="container-fluid color-line"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="card-text text-center">Rua: </p>
+          <p class="card-text text-center">Número: </p>
+          <p class="card-text text-center">Cep: </p>
+          <p class="card-text text-center">Categoria: </p>
+        </div>
+        <div class="col-md-6">
+          <p class="card-text text-center">Novo Eldorado</p>
+          <p class="card-text text-center">1080</p>
+          <p class="card-text text-center">120-8451</p>
+          <p class="card-text text-center">Mercado</p>
         </div>
       </div>
     </div>
+    
+  </div>
+  <div class="card-footer text-muted text-center">
+    <p class="card-text">Contato</p>
+    <i class="fab social-logo fa-facebook-messenger"></i>
+    <i class="fab social-logo fa-whatsapp"></i>
+    <i class="fab social-logo fa-twitter"></i>
+    <i class="fab social-logo fa-instagram"></i>
   </div>
 </div>

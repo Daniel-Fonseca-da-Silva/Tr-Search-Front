@@ -1,4 +1,44 @@
-.earch-text1 {
-    text-align: center;
-    justify-content: center;
+.search-text1 {
+    margin-top: 3%;
+}
+
+.container-1  {
+    padding-top: 2%;
+    padding-bottom: 10%;
+    background-color: blue;
+}
+
+.btn-danger {
+    margin-left: 1rem;
+}
+
+.social-logo {
+   font-size: 2em;
+   margin-left: 1%;
+   margin-right: 1%;
+}
+
+.fa-facebook-messenger {
+    color: dodgerblue;
+}
+
+.fa-whatsapp {
+    color: chartreuse;
+}
+
+.fa-twitter {
+    color: cadetblue;
+}
+
+.fa-instagram {
+    color: goldenrod;
+}
+
+.color-line {
+    background-color: grey;
+    padding-top: 0.1%;
+}
+
+.card-footer {
+    margin-bottom: 10%;
 }
