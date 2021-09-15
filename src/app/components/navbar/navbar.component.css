@@ -1,10 +1,12 @@
 .container-navbar {
-    background-color: #f3f7f8;
+    background-color: #2fbac2;
     height: 1%;
 }
 
 a {
-    color: #09979E;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 a:hover {
