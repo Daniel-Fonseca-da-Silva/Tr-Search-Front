@@ -1,21 +1,21 @@
 .btn {
-    color: #f3f7f8;
-    background-color: #2fbac2;
-    padding: 5px 10px;
-    font-size: 1.5rem;
-    border-radius: 30px;
-    width:100%; 
+  color: #f3f7f8;
+  background-color: #2fbac2;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  width: 100%;
 }
 
 .btn:hover {
-    color: Black;
+  color: Black;
 }
 .search-text1 {
-    margin-top: 3%;
+  margin-top: 3%;
 }
 
 .person-logo {
-    font-size: 2rem;
-    color: #2fbac2;
-    margin-bottom: 1%;
+  font-size: 2rem;
+  color: #2fbac2;
+  margin-bottom: 1%;
 }
