@@ -1,0 +1,33 @@
+.fa-store-alt {
+  font-size: 4rem;
+  color: #2fbac2;
+}
+
+.search-text1 {
+  margin-top: 3%;
+}
+
+.myButton {
+  background-color: #2fbac2;
+  border-radius: 42px;
+  display: inline-block;
+  cursor: pointer;
+  color: #f3f7f8;
+  padding: 12px 59px;
+  text-decoration: none;
+  border: none;
+  margin-left: 0.5em;
+}
+
+.myButton:hover {
+  color: black;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.form-container {
+  margin-bottom: 10%;
+}

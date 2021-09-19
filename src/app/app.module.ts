@@ -12,6 +12,7 @@ import { CommonComponent } from './components/common/common.component';
 import { CorporateComponent } from './components/corporate/corporate.component';
 import { UserCorpComponent } from './model/user-corp/user-corp.component';
 import { UserComComponent } from './model/user-com/user-com.component';
+import { EstablishmentComponent } from './model/establishment/establishment.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UserComComponent } from './model/user-com/user-com.component';
     CorporateComponent,
     UserCorpComponent,
     UserComComponent,
+    EstablishmentComponent,
   ],
   imports: [
     BrowserModule,
