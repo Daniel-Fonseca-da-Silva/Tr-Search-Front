@@ -17,7 +17,7 @@
         class="form-control"
         id="inputName"
         placeholder="Nome da loja"
-        checked
+        required
       />
     </div>
     <div class="col-md-6">
@@ -27,7 +27,7 @@
         class="form-control"
         id="inputSite"
         placeholder="www.loja.com.br"
-        checked
+        required
       />
     </div>
     <div class="col-md-6">
@@ -37,7 +37,7 @@
         class="form-control"
         id="inputStreet"
         placeholder="Rua..."
-        checked
+        required
       />
     </div>
     <div class="col-md-6">
@@ -48,7 +48,7 @@
         id="inputNum"
         placeholder="0"
         min="1"
-        checked
+        required
       />
     </div>
     <div class="col-md-6">
@@ -58,7 +58,7 @@
         class="form-control"
         id="inputCepf"
         placeholder="00000-000"
-        checked
+        required
       />
     </div>
     <div class="col-md-6">
@@ -68,7 +68,7 @@
         class="form-control"
         id="inputEmail"
         placeholder="email@loja.com"
-        checked
+        required
       />
     </div>
     <div class="col-md-6">
@@ -78,7 +78,7 @@
         class="form-control"
         id="inputTel"
         placeholder="(24)0000-0000"
-        checked
+        required
       />
     </div>
     <div class="col-md-6">
@@ -88,7 +88,7 @@
         class="form-control"
         id="inputCel"
         placeholder="(00)00000-0000"
-        checked
+        required
       />
     </div>
     <div class="col-md-6">
@@ -139,6 +139,16 @@
       </select>
     </div>
     <div class="col-md-12">
+      <label for="inputSite" class="form-label">Insira a url da imagem</label>
+      <input
+        type="url"
+        class="form-control"
+        id="inputSite"
+        placeholder="url imagem"
+        required
+      />
+    </div>
+    <div class="col-md-12">
       <label for="exampleFormControlTextarea1" class="form-label"
         >Descrição</label
       >
@@ -147,14 +157,14 @@
         id="exampleFormControlTextarea1"
         rows="4"
         placeholder="Minha loja oferece..."
-        checked
+        required
       ></textarea>
     </div>
     <div class="col-12"></div>
   </form>
   <div class="container-fluid text-center">
-    <button type="submit" class="btn btn-primary myButton">Limpar</button>
+    <button type="button" class="btn btn-primary myButton">Limpar</button>
     <button type="submit" class="btn btn-primary myButton">Cadastrar</button>
-    <button type="submit" class="btn btn-primary myButton">Voltar</button>
+    <button type="button" class="btn btn-primary myButton">Voltar</button>
   </div>
 </div>
