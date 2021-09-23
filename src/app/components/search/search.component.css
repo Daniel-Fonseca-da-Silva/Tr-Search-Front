@@ -31,3 +31,11 @@
 .form-container {
   margin-bottom: 10%;
 }
+.card {
+  justify-content: center;
+  text-align: center;
+}
+
+.col-center {
+  margin: 0 auto;
+}
