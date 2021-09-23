@@ -38,4 +38,10 @@
 
 .col-center {
   margin: 0 auto;
+  padding-top: 1rem;
+}
+
+.table-itens {
+  padding-bottom: 4%;
+  padding-top: 1%;
 }

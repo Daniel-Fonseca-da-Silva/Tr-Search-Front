@@ -6,30 +6,36 @@
   </p>
 </div>
 
-<div class="containe">
+<div class="d-flex justify-content-center table-itens" *ngFor="let item of lista">
+
   <div class="card">
-    <div class="col-md-3 col-center">
+    <div class="col-md-6 col-center">
       <img
-        src="../../../assets/img/grocery.jpg"
+        src="{{ item.img_url_est }}"
         class="card-img-top"
-        alt="..."
+        alt="{{ item.name_est }}"
       />
     </div>
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
+      <h5 class="card-title">{{ item.name_est }}</h5>
+      <p class="card-text">{{ item.description_est }}</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
+      <li class="list-group-item">Bairro: {{ item.district_est }}</li>
+      <li class="list-group-item">Rua: {{ item.address_est }}</li>
+      <li class="list-group-item">Número: {{ item.number_est }}</li>
+      <li class="list-group-item">CEP: {{ item.cep_est }}</li>
+      <li class="list-group-item">Cidade: {{ item.city_est }}</li>
+      <li class="list-group-item">Estado: {{ item.state_est }}</li>
     </ul>
     <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
+      <h5 class="card-title">Contato</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Telefone: {{ item.tel_est}}</li>
+          <li class="list-group-item">Celular: {{ item.cel_est }}</li>
+          <li class="list-group-item">Email: {{ item.email_est }}</li>
+          <li class="list-group-item">Site: {{ item.site_est }}</li>
+        </ul>
     </div>
   </div>
 </div>
