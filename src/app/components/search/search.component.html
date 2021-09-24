@@ -6,35 +6,36 @@
   </p>
 </div>
 
-<div class="d-flex justify-content-center table-itens" *ngFor="let item of lista">
+<div class="d-flex justify-content-center table-itens" *ngFor="let item of list">
 
   <div class="card">
     <div class="col-md-6 col-center">
       <img
-        src="{{ item.img_url_est }}"
+        src="{{ item.imgurl }}"
         class="card-img-top"
-        alt="{{ item.name_est }}"
+        alt="{{ item.name }}"
       />
     </div>
     <div class="card-body">
-      <h5 class="card-title">{{ item.name_est }}</h5>
-      <p class="card-text">{{ item.description_est }}</p>
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text">{{ item.description }}</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Bairro: {{ item.district_est }}</li>
-      <li class="list-group-item">Rua: {{ item.address_est }}</li>
-      <li class="list-group-item">Número: {{ item.number_est }}</li>
-      <li class="list-group-item">CEP: {{ item.cep_est }}</li>
-      <li class="list-group-item">Cidade: {{ item.city_est }}</li>
-      <li class="list-group-item">Estado: {{ item.state_est }}</li>
+      <li class="list-group-item">Bairro: {{ item.district }}</li>
+      <li class="list-group-item">Rua: {{ item.address }}</li>
+      <li class="list-group-item">Número: {{ item.number }}</li>
+      <li class="list-group-item">CEP: {{ item.cep }}</li>
+      <li class="list-group-item">Cidade: {{ item.city }}</li>
+      <li class="list-group-item">Estado: {{ item.state }}</li>
+      <li class="list-group-item">Data: {{ item.datainsert }}</li>
     </ul>
     <div class="card-body">
       <h5 class="card-title">Contato</h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Telefone: {{ item.tel_est}}</li>
-          <li class="list-group-item">Celular: {{ item.cel_est }}</li>
-          <li class="list-group-item">Email: {{ item.email_est }}</li>
-          <li class="list-group-item">Site: {{ item.site_est }}</li>
+          <li class="list-group-item">Telefone: {{ item.tel}}</li>
+          <li class="list-group-item">Celular: {{ item.cel }}</li>
+          <li class="list-group-item">Email: {{ item.email }}</li>
+          <li class="list-group-item">Site: {{ item.site }}</li>
         </ul>
     </div>
   </div>
