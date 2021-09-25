@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Establishment } from '../model/establishment';
+import { Establishment } from './';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EstablishmentService {
+export class SearchService {
 
   baseUrl = environment.baseUrl;
 
