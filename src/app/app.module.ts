@@ -4,16 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LogoComponent } from './components/logo/logo.component';
+import { LogoComponent } from './logos';
 import { NavbarComponent } from './navbars';
-import { FooterComponent } from './components/footer/footer.component';
-import { SearchComponent } from './searches/search/search.component';
-import { UserComponent } from './users/user/user.component';
-import { CommonComponent } from './components/common/common.component';
-import { CorporateComponent } from './components/corporate/corporate.component';
-import { UserCorpComponent } from './components/user-corp/user-corp.component';
-import { UserComComponent } from './components/user-com/user-com.component';
-import { EstablishmentComponent } from './components/establishment/establishment.component';
+import { FooterComponent } from './footers';
+import { SearchComponent } from './searches';
+import { UserComponent } from './users';
+import { CommonComponent } from './commons';
+import { CorporateComponent } from './corporates';
+import { UserCorpComponent } from './userscorp';
+import { UserComComponent } from './userscom';
+import { EstablishmentComponent } from './establishments';
 
 import { SearchModule } from './searches';
 
