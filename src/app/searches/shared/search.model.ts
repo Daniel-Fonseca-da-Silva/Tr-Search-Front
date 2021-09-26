@@ -3,7 +3,7 @@ export interface Establishment {
     name: string,
     site: string,
     address: string,
-    number: string,
+    numberr: string,
     cep: string,
     email: string,
     tel: string,

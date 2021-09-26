@@ -5,7 +5,7 @@ import { SearchComponent } from './index';
 export const SearchRoutes: Routes = [
     {
         path: 'searches',
-        redirectTo: 'searchers/search'
+        redirectTo: 'searchers/search',
     },
     {
         path: 'searchers/search',

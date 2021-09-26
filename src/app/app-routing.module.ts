@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { SearchRoutes } from './searches';
+import { UserRoutes } from './users';
 
 const routes: Routes = [
   {
@@ -9,7 +10,8 @@ const routes: Routes = [
     redirectTo: '/searchers/search',
     pathMatch: 'full'
   },
-  ...SearchRoutes
+  ...SearchRoutes,
+  ...UserRoutes
 ];
 
 @NgModule({
