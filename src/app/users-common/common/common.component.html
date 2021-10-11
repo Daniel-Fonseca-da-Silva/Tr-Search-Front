@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="container">
-    <p class="fs-3 search-text1 text-center">Usuário corporativo</p>
+    <p class="fs-3 search-text1 text-center">Usuário comum</p>
     <p class="description-txt text-center">
       Insira corretamente as informações abaixo para efetuar login
     </p>
@@ -28,6 +28,7 @@
   </form>
   <div class="container-fluid text-center">
     <button type="submit" class="btn btn-primary myButton">Entrar</button>
-    <button type="submit" class="btn btn-primary myButton">Cadastrar</button>
+    <button [routerLink]="['/common-user-register']" type="button" class="btn btn-primary myButton">Cadastrar</button>
+    <button [routerLink]="['/user']" type="button" class="btn btn-primary myButton">Voltar</button>
   </div>
 </div>

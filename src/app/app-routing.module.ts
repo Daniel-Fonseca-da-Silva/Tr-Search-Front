@@ -5,6 +5,10 @@ import { SearchRoutes } from './searches';
 import { UserRoutes } from './users';
 import { AboutRoutes } from './abouts';
 import { ConfigRoutes } from './configs';
+import { CommonRoutes } from './users-common';
+import { CorporateRoutes } from './users-corporate';
+import { UserComRoutes } from './users-com-cad';
+import { UserCorpRoutes } from './users-corp-cad';
 
 const routes: Routes = [
   {
@@ -15,7 +19,11 @@ const routes: Routes = [
   ...SearchRoutes,
   ...UserRoutes,
   ...AboutRoutes,
-  ...ConfigRoutes
+  ...ConfigRoutes,
+  ...CommonRoutes,
+  ...CorporateRoutes,
+  ...UserComRoutes,
+  ...UserCorpRoutes
 ];
 
 @NgModule({

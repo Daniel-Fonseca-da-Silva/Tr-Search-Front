@@ -4,11 +4,11 @@ import { UserComComponent } from './index';
 
 export const UserComRoutes: Routes = [
     {
-        path: 'usercoms',
-        redirectTo: 'usercoms/usercom'
+        path: 'normal-user-cad',
+        redirectTo: 'common-user-register'
     },
     {
-        path: 'usercoms/usercom',
+        path: 'common-user-register',
         component: UserComComponent
     }
 ];

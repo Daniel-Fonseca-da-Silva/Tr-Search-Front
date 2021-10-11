@@ -5,14 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './logos';
-import { NavbarComponent } from './navbars';
+import { HeaderComponent } from './headers';
 import { FooterComponent } from './footers';
 import { SearchComponent } from './searches';
 import { UserComponent } from './users';
-import { CommonComponent } from './commons';
-import { CorporateComponent } from './corporates';
-import { UserCorpComponent } from './userscorp';
-import { UserComComponent } from './userscom';
+import { CommonComponent } from './users-common';
+import { CorporateComponent } from './users-corporate';
+import { UserCorpComponent } from './users-corp-cad';
+import { UserComComponent } from './users-com-cad';
 import { EstablishmentComponent } from './establishments';
 
 import { SearchModule } from './searches';
@@ -23,7 +23,7 @@ import { ConfigComponent } from './configs';
   declarations: [
     AppComponent,
     LogoComponent,
-    NavbarComponent,
+    HeaderComponent,
     FooterComponent,
     SearchComponent,
     UserComponent,

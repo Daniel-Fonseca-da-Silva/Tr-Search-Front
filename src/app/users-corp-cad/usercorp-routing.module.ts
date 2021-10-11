@@ -4,11 +4,11 @@ import { UserCorpComponent } from './index';
 
 export const UserCorpRoutes: Routes = [
     {
-        path: 'usercorps',
-        redirectTo: 'usercorps/usercorp'
+        path: 'corporate-user-cad',
+        redirectTo: 'corporate-user-register'
     },
     {
-        path: 'usercorps/usercorp',
+        path: 'corporate-user-register',
         component: UserCorpComponent
     }
 ];

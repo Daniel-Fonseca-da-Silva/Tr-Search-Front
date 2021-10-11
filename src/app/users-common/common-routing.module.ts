@@ -5,10 +5,10 @@ import { CommonComponent } from './index';
 export const CommonRoutes: Routes = [
     {
         path: 'common',
-        redirectTo: 'commons/common'
+        redirectTo: 'common-user'
     },
     {
-        path: 'commons/common',
+        path: 'common-user',
         component: CommonComponent
     }
 ];

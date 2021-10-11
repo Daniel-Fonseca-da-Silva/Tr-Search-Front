@@ -5,10 +5,10 @@ import { CorporateComponent } from './index';
 export const CorporateRoutes: Routes = [
     {
         path: 'corporate',
-        redirectTo: 'corporates/corporate'
+        redirectTo: 'corporate-user'
     },
     {
-        path: 'corporates/corporate',
+        path: 'corporate-user',
         component: CorporateComponent
     }
 ];
