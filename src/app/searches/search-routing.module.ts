@@ -4,11 +4,15 @@ import { SearchComponent } from './index';
 
 export const SearchRoutes: Routes = [
     {
-        path: 'searches',
-        redirectTo: 'searchers/search',
+        path: 'find',
+        redirectTo: 'search',
     },
     {
-        path: 'searchers/search',
+        path: 'busca',
+        redirectTo: 'search'
+    },
+    {
+        path: 'search',
         component: SearchComponent
     }
 ];

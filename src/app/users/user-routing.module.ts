@@ -5,11 +5,14 @@ import { UserComponent } from './index';
 export const UserRoutes: Routes = [
     {
         path: 'users',
-        redirectTo: 'users/user'
+        redirectTo: 'user'
     },
     {
-        path: 'users/user',
+        path: 'usuario',
+        redirectTo: 'user'
+    },
+    {
+        path: 'user',
         component: UserComponent
     }
 ];
-

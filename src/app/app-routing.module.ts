@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { SearchRoutes } from './searches';
 import { UserRoutes } from './users';
+import { AboutRoutes } from './abouts';
+import { ConfigRoutes } from './configs';
 
 const routes: Routes = [
   {
@@ -11,7 +13,9 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   ...SearchRoutes,
-  ...UserRoutes
+  ...UserRoutes,
+  ...AboutRoutes,
+  ...ConfigRoutes
 ];
 
 @NgModule({

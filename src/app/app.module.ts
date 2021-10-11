@@ -16,6 +16,8 @@ import { UserComComponent } from './userscom';
 import { EstablishmentComponent } from './establishments';
 
 import { SearchModule } from './searches';
+import { AboutComponent } from './abouts';
+import { ConfigComponent } from './configs';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { SearchModule } from './searches';
     CorporateComponent,
     UserCorpComponent,
     UserComComponent,
-    EstablishmentComponent
+    EstablishmentComponent,
+    AboutComponent,
+    ConfigComponent
   ],
   imports: [
     BrowserModule,
