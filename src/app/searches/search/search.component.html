@@ -1,42 +1,61 @@
 <div class="container">
-  <p class="fs-3 search-text1 text-center">Buscar estabelecimento</p>
+  <p class="fs-3 search-text1 text-center">Buscar Estabelecimento</p>
   <p class="logo-corp text-center"><i class="far fa-eye"></i></p>
-  <p class="description-txt text-center">
-    Insira os valores nos campos para fazer uma busca
-  </p>
 </div>
 
-<div class="d-flex justify-content-center table-itens" *ngFor="let item of list">
+<div class="container text-center">
+  <label for="search" class="form-label">Insira um nome no campo para efetuar uma busca</label>
+  <input (keyup.enter)="findName(searched.value)" type="text" class="form-control text-center" id="searched" #searched
+    aria-describedby="searchHelp" />
+  <button type="submit" (click)="findName(searched.value)" class="btn btn-primary myButton btnSearch">Buscar</button>
+  <button type="text" (click)="searched.value = ''" class="btn btn-primary myButton btnSearch">Limpar</button>
+</div>
 
-  <div class="card">
-    <div class="col-md-6 col-center">
-      <img
-        src="{{ item.imgurl }}"
-        class="card-img-top"
-        alt="{{ item.name }}"
-      />
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">{{ item.name }}</h5>
-      <p class="card-text">{{ item.description }}</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Bairro: {{ item.district }}</li>
-      <li class="list-group-item">Rua: {{ item.address }}</li>
-      <li class="list-group-item">Número: {{ item.numberr }}</li>
-      <li class="list-group-item">CEP: {{ item.cep }}</li>
-      <li class="list-group-item">Cidade: {{ item.city }}</li>
-      <li class="list-group-item">Estado: {{ item.state }}</li>
-      <li class="list-group-item">Data: {{ item.datainsert }}</li>
-    </ul>
-    <div class="card-body">
-      <h5 class="card-title">Contato</h5>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Telefone: {{ item.tel}}</li>
-          <li class="list-group-item">Celular: {{ item.cel }}</li>
-          <li class="list-group-item">Email: {{ item.email }}</li>
-          <li class="list-group-item">Site: {{ item.site }}</li>
-        </ul>
+<form>
+  <div class="container est-form" *ngFor="let item of establishment">
+    <div class="row">
+      <div class="card">
+        <div class="col-md-6 col-center">
+          <img src="{{ item.imgurl }}" class="card-img-top" alt="{{ item.name }}" />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">{{ item.description }}</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <h5 class="card-title">Endereço</h5>
+            <li class="list-group-item">Bairro: {{ item.district }}</li>
+            <li class="list-group-item">Rua: {{ item.address }}</li>
+            <li class="list-group-item">Número: {{ item.numberr }}</li>
+            <li class="list-group-item">CEP: {{ item.cep }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col order-5">
+        <div class="card-body">
+          <h5 class="card-title">Informações</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Nome: {{ item.name }}</li>
+            <li class="list-group-item">Pontuação: {{ item.score }}</li>
+            <li class="list-group-item">Cidade: {{ item.city }}</li>
+            <li class="list-group-item">Estado: {{ item.state }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col order-1">
+        <div class="card-body">
+          <h5 class="card-title">Contato</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Telefone: {{ item.tel}}</li>
+            <li class="list-group-item">Celular: {{ item.cel }}</li>
+            <li class="list-group-item">Email: {{ item.email }}</li>
+            <li class="list-group-item">Site: {{ item.site }}</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</form>

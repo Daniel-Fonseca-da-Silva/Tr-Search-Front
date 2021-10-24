@@ -14,5 +14,7 @@ export interface Establishment {
     category: string,
     imgurl: string,
     description: string,
-    datainsert?: Date 
+    score: number,
+    actived: boolean,
+    dataest?: Date 
 }

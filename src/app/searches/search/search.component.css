@@ -41,7 +41,11 @@
   padding-top: 1rem;
 }
 
-.table-itens {
-  padding-bottom: 4%;
-  padding-top: 1%;
+.btnSearch {
+  margin-top: 1.0%;
+}
+
+.est-form {
+  padding-top: 2%;
+  padding-bottom: 3%;
 }

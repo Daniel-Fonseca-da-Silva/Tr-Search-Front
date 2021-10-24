@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Establishment } from '../';
+
 import { SearchService } from '../';
 
 @Component({
@@ -9,18 +9,21 @@ import { SearchService } from '../';
 })
 export class SearchComponent implements OnInit {
 
-  list: Establishment[] = [];
+  establishment: Array<any> = new Array();
 
   constructor(private service: SearchService) { }
 
-  ngOnInit(): void {
-    this.findAll();
-  }
+  ngOnInit(): void { }
 
-  findAll(): void {
-    this.service.findAll().subscribe((resposta) => {
-      this.list = resposta;
-    })
+  findName(searched: string): void {
+
+    this.service.getName(searched).subscribe(establishment => {
+      this.establishment = establishment;
+    }, err => {
+      if (!searched.length)
+        console.log('Campo em branco, verifique.');
+      console.log('Erro ao buscar estabelecimento. ', err);
+    });
   }
 
 }
