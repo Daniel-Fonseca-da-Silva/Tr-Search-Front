@@ -18,6 +18,7 @@ import { RegisterEstablishmentComponent } from './register-establishments';
 import { SearchModule } from './searches';
 import { AboutComponent } from './abouts';
 import { ConfigurationComponent } from './configurations';
+import { CorporateOptionComponent } from './corporates-option';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ConfigurationComponent } from './configurations';
     UserComComponent,
     RegisterEstablishmentComponent,
     AboutComponent,
-    ConfigurationComponent
+    ConfigurationComponent,
+    CorporateOptionComponent,
   ],
   imports: [
     BrowserModule,

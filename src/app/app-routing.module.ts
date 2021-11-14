@@ -9,6 +9,7 @@ import { CommonRoutes } from './users-common';
 import { CorporateRoutes } from './users-corporate';
 import { UserComRoutes } from './users-common-register';
 import { UserCorpRoutes } from './users-corporate-register';
+import { CorporateOptionRoutes } from './corporates-option';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
   ...CommonRoutes,
   ...CorporateRoutes,
   ...UserComRoutes,
+  ...CorporateOptionRoutes,
   ...UserCorpRoutes
 ];
 
