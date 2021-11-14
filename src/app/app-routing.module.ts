@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { SearchRoutes } from './searches';
-import { UserRoutes } from './users';
+import { LoginUserRoutes } from './login-users';
 import { AboutRoutes } from './abouts';
-import { ConfigRoutes } from './configs';
+import { ConfigurationRoutes } from './configurations';
 import { CommonRoutes } from './users-common';
 import { CorporateRoutes } from './users-corporate';
-import { UserComRoutes } from './users-com-cad';
-import { UserCorpRoutes } from './users-corp-cad';
+import { UserComRoutes } from './users-common-register';
+import { UserCorpRoutes } from './users-corporate-register';
 
 const routes: Routes = [
   {
@@ -17,9 +17,9 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   ...SearchRoutes,
-  ...UserRoutes,
+  ...LoginUserRoutes,
   ...AboutRoutes,
-  ...ConfigRoutes,
+  ...ConfigurationRoutes,
   ...CommonRoutes,
   ...CorporateRoutes,
   ...UserComRoutes,

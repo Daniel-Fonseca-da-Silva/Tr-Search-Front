@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { UserCorpComponent } from './index';
+import { UserCorporateRegisterComponent } from './index';
 
 export const UserCorpRoutes: Routes = [
     {
@@ -9,7 +9,7 @@ export const UserCorpRoutes: Routes = [
     },
     {
         path: 'corporate-user-register',
-        component: UserCorpComponent
+        component: UserCorporateRegisterComponent
     }
 ];
 

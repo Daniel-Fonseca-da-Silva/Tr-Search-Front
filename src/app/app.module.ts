@@ -6,35 +6,34 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogoComponent } from './logos';
-import { HeaderComponent } from './headers';
+import { NavbarComponent } from './navbars';
 import { FooterComponent } from './footers';
 import { SearchComponent } from './searches';
-import { UserComponent } from './users';
+import { LoginUserComponent } from './login-users';
 import { CommonComponent } from './users-common';
 import { CorporateComponent } from './users-corporate';
-import { UserCorpComponent } from './users-corp-cad';
-import { UserComComponent } from './users-com-cad';
-import { EstablishmentComponent } from './establishments';
-
+import { UserCorporateRegisterComponent } from './users-corporate-register';
+import { UserComComponent } from './users-common-register';
+import { RegisterEstablishmentComponent } from './register-establishments';
 import { SearchModule } from './searches';
 import { AboutComponent } from './abouts';
-import { ConfigComponent } from './configs';
+import { ConfigurationComponent } from './configurations';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
-    HeaderComponent,
+    NavbarComponent,
     FooterComponent,
     SearchComponent,
-    UserComponent,
+    LoginUserComponent,
     CommonComponent,
     CorporateComponent,
-    UserCorpComponent,
+    UserCorporateRegisterComponent,
     UserComComponent,
-    EstablishmentComponent,
+    RegisterEstablishmentComponent,
     AboutComponent,
-    ConfigComponent
+    ConfigurationComponent
   ],
   imports: [
     BrowserModule,
