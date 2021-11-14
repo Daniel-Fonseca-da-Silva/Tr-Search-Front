@@ -19,6 +19,7 @@ import { SearchModule } from './searches';
 import { AboutComponent } from './abouts';
 import { ConfigurationComponent } from './configurations';
 import { CorporateOptionComponent } from './corporates-option';
+import { EstablishmentComponent } from './establishments';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CorporateOptionComponent } from './corporates-option';
     AboutComponent,
     ConfigurationComponent,
     CorporateOptionComponent,
+    EstablishmentComponent,
   ],
   imports: [
     BrowserModule,

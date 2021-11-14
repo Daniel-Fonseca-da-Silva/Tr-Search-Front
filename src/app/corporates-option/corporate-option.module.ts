@@ -4,11 +4,11 @@ import { CorporateOptionComponent } from './index';
 
 export const CorporateOptionRoutes: Routes = [
     {
-        path: 'corporate_option',
+        path: 'corporate-option',
         redirectTo: 'corporate-option'
     },
     {
-        path: 'usuário_opção',
+        path: 'usuário-opção',
         redirectTo: 'corporate-option'
     },
     {

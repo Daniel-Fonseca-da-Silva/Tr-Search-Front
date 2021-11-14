@@ -10,6 +10,7 @@ import { CorporateRoutes } from './users-corporate';
 import { UserComRoutes } from './users-common-register';
 import { UserCorpRoutes } from './users-corporate-register';
 import { CorporateOptionRoutes } from './corporates-option';
+import { EstablishmentRoutes } from './establishments';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
   ...CorporateRoutes,
   ...UserComRoutes,
   ...CorporateOptionRoutes,
+  ...EstablishmentRoutes,
   ...UserCorpRoutes
 ];
 
