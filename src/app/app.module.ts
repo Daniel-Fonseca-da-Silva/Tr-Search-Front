@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginUserRegularFormModule } from './login-user-regular-form';
+import { ChooseLoginModule } from './choose-login';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +15,8 @@ import { LoginUserRegularFormModule } from './login-user-regular-form';
     BrowserModule,
     FontAwesomeModule,
     AppRoutingModule,
-    LoginUserRegularFormModule
+    LoginUserRegularFormModule,
+    ChooseLoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
