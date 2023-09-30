@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-choose-login',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./choose-login.component.css']
 })
 export class ChooseLoginComponent {
+  constructor(
+    private router: Router,
+    private elementRef: ElementRef
+  ) {}
+
+  routeRegularUser() {
+    this.router.navigateByUrl('/regular-user-login');
+    this.elementRef.nativeElement.remove();
+  }
 
 }

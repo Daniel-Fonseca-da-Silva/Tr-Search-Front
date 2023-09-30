@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChooseLoginComponent } from './choose-login';
-import { LoginUserRegularFormModule } from '../login-user-regular-form';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { LoginUserRegularFormModule } from '../login-user-regular-form';
     ChooseLoginComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     ChooseLoginComponent
