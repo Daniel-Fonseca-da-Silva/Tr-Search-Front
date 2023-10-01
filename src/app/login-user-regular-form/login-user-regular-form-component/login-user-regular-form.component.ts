@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginUserRegularFormService } from './login-user-regular-form.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-user-regular-form',
@@ -8,14 +9,19 @@ import { LoginUserRegularFormService } from './login-user-regular-form.service';
 })
 export class LoginUserRegularFormComponent {
   constructor(
-    private loginService: LoginUserRegularFormService
+    private loginService: LoginUserRegularFormService, private fb: FormBuilder
   ) {}
 
-  email: string = '';
-  password: string = '';
+  loginForm!: FormGroup;
+
+  ngOnInit(): void {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+    });
+  }
 
   public onSubmitRegularUser(): void {
-    const { email, password } = this;
-    this.loginService.loginRegularUser(email, password);
+    this.loginService.loginRegularUser(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value);
   }
 }
