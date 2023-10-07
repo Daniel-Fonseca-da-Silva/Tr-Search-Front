@@ -17,4 +17,11 @@ export class ChooseLoginComponent {
     this.elementRef.nativeElement.remove();
   }
 
+  routeCorporateUser() {
+    this.router.navigateByUrl('/regular-corporate-login');
+    this.elementRef.nativeElement.remove();
+  }
+
+  
+
 }
