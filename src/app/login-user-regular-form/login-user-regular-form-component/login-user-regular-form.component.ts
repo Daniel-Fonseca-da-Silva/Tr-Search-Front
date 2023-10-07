@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { LoginUserRegularFormService } from './login-user-regular-form.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { LoginUserRegularFormService } from './login-user-regular-form.service';
+import { faHouseUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login-user-regular-form',
@@ -8,11 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login-user-regular-form.component.css'],
 })
 export class LoginUserRegularFormComponent {
+
+  loginForm!: FormGroup;
+  faHouseUser = faHouseUser;
+
   constructor(
     private loginService: LoginUserRegularFormService, private fb: FormBuilder
   ) {}
-
-  loginForm!: FormGroup;
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
