@@ -12,16 +12,14 @@ export class ChooseLoginComponent {
     private elementRef: ElementRef
   ) {}
 
-  routeRegularUser() {
+  routeRegularUser(): void {
     this.router.navigateByUrl('/regular-user-login');
     this.elementRef.nativeElement.remove();
   }
 
-  routeCorporateUser() {
+  routeCorporateUser(): void {
     this.router.navigateByUrl('/regular-corporate-login');
     this.elementRef.nativeElement.remove();
   }
-
-  
 
 }

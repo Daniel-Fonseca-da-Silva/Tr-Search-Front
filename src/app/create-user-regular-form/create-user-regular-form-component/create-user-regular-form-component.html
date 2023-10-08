@@ -1,0 +1,291 @@
+<div class="flex items-center justify-center py-5">
+  <div
+    class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  >
+    <div class="px-1 text-center">
+      <h1
+        class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl"
+      >
+        REGISTRATION
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400"
+          >USER</span
+        >
+      </h1>
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+      <fa-icon [icon]="faTrashCan" class="ml-1"></fa-icon>
+      <a
+        (click)="resetForm()"
+        class="font-medium text-blue-600 underline dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:no-underline cursor-pointer"
+      >
+        RESET</a
+      >
+      <form [formGroup]="createform" (ngSubmit)="onSubmitCreateRegularUser()">
+        <!-- Name -->
+        <div class="grid gap-6 mb-6 md:grid-cols-2">
+          <div>
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Complete name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              formControlName="name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Tr Search"
+              required
+            />
+            <div
+              *ngIf="createform.get('name')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Name is mandatory!
+            </div>
+            <div
+              *ngIf="createform.get('name')?.hasError('minlength')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Name invalid!
+            </div>
+          </div>
+          <!-- Photo -->
+          <div>
+            <label
+              for="photo"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Photo url</label
+            >
+            <input
+              type="text"
+              id="photo"
+              name="photo"
+              formControlName="photo"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Photo url"
+              required
+            />
+            <div
+              *ngIf="createform.get('photo')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Photo is mandatory!
+            </div>
+          </div>
+          <!-- Document -->
+          <div>
+            <label
+              for="document"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Documentation</label
+            >
+            <input
+              type="text"
+              id="document"
+              name="document"
+              formControlName="document"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="FX-01017"
+              required
+            />
+            <div
+              *ngIf="createform.get('document')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Document is mandatory!
+            </div>
+          </div>
+          <!-- Phone -->
+          <div>
+            <label
+              for="phone"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Phone number</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              formControlName="phone"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="+1234567890"
+              required
+            />
+            <div
+              *ngIf="createform.get('phone')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Telephone is mandatory!
+            </div>
+          </div>
+          <!-- Gender -->
+          <div>
+            <label
+              for="gender"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Gender</label
+            >
+            <select
+              id="gender"
+              name="gender"
+              formControlName="gender"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option selected disabled>Choose a gender</option>
+              <option value="MALE">Male</option>
+              <option value="FEMALE">Female</option>
+              <option value="OTHER">Other</option>
+            </select>
+            <div
+              *ngIf="createform.get('gender')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Gender is mandatory!
+            </div>
+          </div>
+          <!-- Birthday -->
+          <div>
+            <label
+              for="birthday"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Birthday</label
+            >
+            <input
+              type="date"
+              id="birthday"
+              name="birthday"
+              formControlName="birthday"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder=""
+              required
+            />
+            <div
+              *ngIf="createform.get('birthday')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Birthday is mandatory!
+            </div>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="mb-6">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Email address</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            formControlName="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="tr.search@dafon.com"
+            required
+          />
+          <div
+            *ngIf="createform.get('email')?.hasError('required')"
+            class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+          >
+            Email is mandatory!
+          </div>
+        </div>
+        <!-- Password -->
+        <div class="mb-6">
+          <label
+            for="password"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            formControlName="password"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="•••••••••"
+            required
+          />
+          <div
+            *ngIf="createform.get('password')?.hasError('required')"
+            class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+          >
+            Password is mandatory!
+          </div>
+        </div>
+        <!-- Confirm Password -->
+        <div class="mb-6">
+          <label
+            for="confirm_password"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Confirm password</label
+          >
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            formControlName="confirm_password"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="•••••••••"
+            required
+          />
+          <div
+            *ngIf="createform.get('confirm_password')?.hasError('required')"
+            class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+          >
+            Confirma password is mandatory!
+          </div>
+        </div>
+        <!-- Conditions -->
+        <div class="flex items-start mb-6">
+          <div class="flex items-center h-5">
+            <input
+              id="conditions"
+              type="checkbox"
+              name="conditions"
+              formControlName="conditions"
+              value=""
+              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+              required
+            />
+          </div>
+          <label
+            for="conditions"
+            class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >I agree with the
+            <a href="#" class="text-blue-600 hover:underline dark:text-blue-500"
+              >terms and conditions</a
+            >.</label
+          >
+        </div>
+        <div class="mb-5">
+          <div
+              *ngIf="createform.get('conditions')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+            Condition is mandatory!
+            </div>
+        </div>
+        <!-- Button of register -->
+        <button
+          type="submit"
+          class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+        >
+          REGISTER
+        </button>
+      </form>
+      <div>
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+        <fa-icon [icon]="faHouseUser"></fa-icon>
+        <a
+          (click)="routerBack()"
+          class="font-medium text-blue-600 underline dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:no-underline cursor-pointer"
+        >
+          BACK</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

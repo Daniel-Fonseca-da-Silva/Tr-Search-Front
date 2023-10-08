@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
+import { CreateUserRegularFormComponent } from './index';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { LoginUserRegularFormComponent } from './index';
+
 
 @NgModule({
   declarations: [
-    LoginUserRegularFormComponent
+    CreateUserRegularFormComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +19,7 @@ import { LoginUserRegularFormComponent } from './index';
     FontAwesomeModule,
   ],
   exports: [
-    LoginUserRegularFormComponent
+    CreateUserRegularFormComponent
   ]
 })
-export class LoginUserRegularFormModule { }
+export class CreateUserRegularFormModule { }
