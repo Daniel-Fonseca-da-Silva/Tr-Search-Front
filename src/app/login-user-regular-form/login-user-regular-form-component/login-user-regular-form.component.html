@@ -118,25 +118,25 @@
           LOGIN
         </button>
       </form>
-      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+      <!-- Back Icon -->
       <div>
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
         <p class="mb-3 text-gray-500 dark:text-gray-400">
           Need an account?
           <a
-            href="#"
-            class="font-medium text-blue-600 underline dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:no-underline"
+            (click)="routerCreateUser()"
+            class="font-medium text-blue-600 underline dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:no-underline cursor-pointer"
           >
             SIGN UP</a
           >
         </p>
-        <fa-icon [icon]="faHouseUser"></fa-icon> 
+        <fa-icon [icon]="faHouseUser"></fa-icon>
         <a
-            href="#"
-            class="font-medium text-blue-600 underline dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:no-underline"
-          >
-            BACK</a
-          >
-        
+          href="#"
+          class="font-medium text-blue-600 underline dark:text-blue-500 dark:hover:text-blue-600 hover:text-blue-700 hover:no-underline cursor-pointer"
+        >
+          BACK</a
+        >
       </div>
     </div>
   </div>
