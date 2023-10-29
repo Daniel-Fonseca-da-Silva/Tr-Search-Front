@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LoginUserRegularFormModule } from './login-user-regular-form';
 import { ChooseLoginModule } from './choose-login';
+import { HomeModule } from './home';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ChooseLoginModule } from './choose-login';
     ReactiveFormsModule,
     FontAwesomeModule,
     LoginUserRegularFormModule,
-    ChooseLoginModule
+    ChooseLoginModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
