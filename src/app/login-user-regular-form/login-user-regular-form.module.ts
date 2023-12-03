@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { LoginUserRegularFormComponent } from './index';
+import { LoadingModule } from '../loading';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { LoginUserRegularFormComponent } from './index';
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    LoadingModule
   ],
   exports: [
     LoginUserRegularFormComponent

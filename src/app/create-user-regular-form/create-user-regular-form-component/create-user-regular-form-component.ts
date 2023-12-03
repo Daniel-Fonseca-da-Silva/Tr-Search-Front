@@ -1,9 +1,9 @@
 import { Component, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+
+import { faTrashCan, faHouseUser } from '@fortawesome/free-solid-svg-icons';
 
 import { CreateUserRegularFormService } from './index';
-import { faTrashCan, faHouseUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-create-user-regular-form-component',
@@ -15,36 +15,44 @@ export class CreateUserRegularFormComponent {
   createform!: FormGroup;
   faTrashCan = faTrashCan;
   faHouseUser = faHouseUser;
+  passwordNotEqual = false;
 
   constructor(
-    private createService: CreateUserRegularFormService,
     private fb: FormBuilder,
-    private router: Router,
-    private elementRef: ElementRef
+    private service: CreateUserRegularFormService,
   ) {}
 
   ngOnInit(): void {
     this.createform = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(6)]],
-      photo: ['', [Validators.required]],
-      document: ['', [Validators.required]],
       phone: ['', [Validators.required]],
-      gender: ['', [Validators.required]],
-      birthday: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirm_password: ['', [Validators.required, Validators.minLength(6)]],
+      email: ['', [Validators.required, Validators.email]],
+      document: ['', [Validators.required]],
+      photo: [''],
+      birthday: ['', [Validators.required]],
+      gender: ['', [Validators.required]],
       conditions: ['', [Validators.required]]
     });
   }
 
   onSubmitCreateRegularUser(): void {
-    console.log("Created");
-    
-    // this.loginService.loginRegularUser(
-    //   this.createform.get('email')?.value,
-    //   this.createform.get('password')?.value
-    // );
+    if (this.createform.get('password')?.value != this.createform.get('confirm_password')?.value) {
+      this.passwordNotEqual = true
+      return;
+    }
+
+    this.service.createRegularUser(
+      this.createform.get('name')?.value,
+      this.createform.get('phone')?.value,
+      this.createform.get('password')?.value,
+      this.createform.get('email')?.value,
+      this.createform.get('document')?.value,
+      this.createform.get('photo')?.value,
+      this.createform.get('birthday')?.value,
+      this.createform.get('gender')?.value,
+      );
   }
 
   public routerBack(): void {
