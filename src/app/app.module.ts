@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { LoginUserRegularFormModule } from './login-user-regular-form';
 import { ChooseLoginModule } from './choose-login';
 import { HomeModule } from './home';
+import { LoadingModule } from './loading';
+import { LoadingInterceptor } from './loading/loading.interceptor';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,14 @@ import { HomeModule } from './home';
     FontAwesomeModule,
     LoginUserRegularFormModule,
     ChooseLoginModule,
-    HomeModule
+    HomeModule,
+    LoadingModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

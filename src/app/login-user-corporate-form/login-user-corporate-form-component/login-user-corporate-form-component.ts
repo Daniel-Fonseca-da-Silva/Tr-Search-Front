@@ -36,7 +36,7 @@ export class LoginUserCorporateFormComponent {
   }
 
   public routerCreateUser() {
-    this.router.navigateByUrl('/create-regular-user');
+    this.router.navigateByUrl('/create-corporate-user');
     this.elementRef.nativeElement.remove();
   }
 }
