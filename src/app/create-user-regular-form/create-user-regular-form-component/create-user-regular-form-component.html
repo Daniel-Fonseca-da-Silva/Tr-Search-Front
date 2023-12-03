@@ -1,3 +1,5 @@
+<app-loading></app-loading>
+
 <div class="flex items-center justify-center py-5">
   <div
     class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
@@ -65,14 +67,7 @@
               formControlName="photo"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Photo url"
-              required
             />
-            <div
-              *ngIf="createform.get('photo')?.hasError('required')"
-              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
-            >
-              Photo is mandatory!
-            </div>
           </div>
           <!-- Document -->
           <div>
@@ -134,8 +129,8 @@
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
               <option selected disabled>Choose a gender</option>
-              <option value="MALE">Male</option>
-              <option value="FEMALE">Female</option>
+              <option value="MASCULINE">Male</option>
+              <option value="FEMININE">Female</option>
               <option value="OTHER">Other</option>
             </select>
             <div
@@ -214,6 +209,12 @@
           >
             Password is mandatory!
           </div>
+          <div
+            *ngIf="this.passwordNotEqual"
+            class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+          >
+            Password need be equal!
+          </div>
         </div>
         <!-- Confirm Password -->
         <div class="mb-6">
@@ -235,7 +236,13 @@
             *ngIf="createform.get('confirm_password')?.hasError('required')"
             class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
           >
-            Confirma password is mandatory!
+            Confirm password is mandatory!
+          </div>
+          <div
+            *ngIf="this.passwordNotEqual"
+            class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+          >
+            Password need be equal!
           </div>
         </div>
         <!-- Conditions -->
@@ -271,6 +278,7 @@
         <!-- Button of register -->
         <button
           type="submit"
+          [disabled]="createform.invalid"
           class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
         >
           REGISTER

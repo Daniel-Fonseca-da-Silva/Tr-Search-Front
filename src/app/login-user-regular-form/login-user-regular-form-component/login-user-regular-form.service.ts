@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoadingService } from 'src/app/loading';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoginUserRegularFormService {
-  private authToken: string = ""; 
-  constructor(private http: HttpClient,  private router: Router) {}
+  private authToken: string = "";
+  
+  constructor(private http: HttpClient,  private router: Router, private loadingService: LoadingService) {}
 
   setAuthToken(token: string): void {
     this.authToken = token;
