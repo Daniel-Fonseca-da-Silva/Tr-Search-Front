@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './index';
+import { LoadingModule } from '../loading';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { HomeComponent } from './index';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    LoadingModule
   ],
   exports: [
     HomeComponent
