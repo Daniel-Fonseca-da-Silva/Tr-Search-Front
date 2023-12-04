@@ -15,7 +15,7 @@ Welcome to the Tr-Search project, developed by Dafon Web Systems Creation. This 
 #### Premium Levels: We offer premium subscription options that allow corporate users to highlight their ads and reach a wider audience.
 
 ## Technologies Used
-### The Tr-Search backend project utilizes the following technologies:
+### The Tr-Search project utilizes the following technologies:
 
 Angular: The frontend is developed in Angular, a widely used JavaScript framework for building highly interactive and dynamic user interfaces. 
 

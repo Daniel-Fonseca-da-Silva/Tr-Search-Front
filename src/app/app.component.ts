@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  faCoffee = faCoffee;
+  // faCoffee = faCoffee;
   title = 'tr-search-front';
 
   ngOnInit(): void {

@@ -29,6 +29,14 @@ export class LoginUserRegularFormComponent {
     });
   }
 
+  existError(): boolean {
+    if (this.loginService.existError) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public onSubmitRegularUser(): void {
     this.loginService.loginRegularUser(
       this.loginForm.get('email')?.value,
