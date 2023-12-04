@@ -28,14 +28,22 @@ export class LoginUserCorporateFormComponent {
     });
   }
 
+  existError(): boolean {
+    if (this.loginService.existError) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public onSubmitCorporateUser(): void {
-    this.loginService.loginCorporateUser(
+  this.loginService.loginCorporateUser(
       this.loginForm.get('email')?.value,
       this.loginForm.get('password')?.value
     );
   }
 
-  public routerCreateUser() {
+  public routerCreateUser(): void {
     this.router.navigateByUrl('/create-corporate-user');
     this.elementRef.nativeElement.remove();
   }
