@@ -29,29 +29,23 @@ export class HomeComponent implements OnInit {
   faScrewdriverWrench = faScrewdriverWrench;
   faUser = faUser;
   faMagnifyingGlass = faMagnifyingGlass;
-  photoProfile: string =
-    'https://images.pexels.com/photos/259239/pexels-photo-259239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
   kindUser!: string;
+  pageWelcome: boolean = true;
 
   constructor(
     private router: Router,
     private elementRef: ElementRef,
-    private homeService: HomeService
+    protected homeService: HomeService
   ) {}
+
 
   ngOnInit(): void {
     this.kindUser = sessionStorage.getItem('role')!;
-    this.photoProfile = sessionStorage.getItem('photo')!;
     this.getRoleUser();
     initFlowbite();
-  }
-
-  getName(): string {
-    return this.homeService.userValues['name'];
-  }
-
-  getEmail(): string {
-    return this.homeService.userValues['email'];
+    if(this.pageWelcome == true) {
+      this.homeService.changeComponent('welcome');
+    }
   }
 
   getRoleUser(): void {
@@ -70,4 +64,10 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/choose-router');
     this.elementRef.nativeElement.remove();
   }
+
+  changeToSearch() {
+    this.pageWelcome = false;
+    this.homeService.changeComponent('search');
+  }
+
 }
