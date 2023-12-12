@@ -1,4 +1,8 @@
-<form class="max-w-lg mx-auto">
+<form
+  [formGroup]="establishmentForm"
+  (ngSubmit)="onSearchEstablishment()"
+  class="max-w-lg mx-auto"
+>
   <div class="mb-5">
     <label
       for="categories"
@@ -6,7 +10,9 @@
       >Kind Establishment</label
     >
     <select
-      id="categories"
+      id="category"
+      required
+      formControlName="category"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
     >
       <option>Restaurant</option>
@@ -29,23 +35,37 @@
       <option>Automotive</option>
       <option>Religious</option>
     </select>
+    <div
+      *ngIf="establishmentForm.get('category')?.hasError('required')"
+      class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400 mt-1"
+    >
+      category is mandatory!
+    </div>
   </div>
   <div class="mb-5">
     <label
-      for="search-name"
+      for="city"
       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
       >City</label
     >
     <input
       type="text"
-      id="search-name"
+      id="city"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       required
+      formControlName="city"
     />
+    <div
+      *ngIf="establishmentForm.get('city')?.hasError('required')"
+      class="bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400 mt-1"
+    >
+      City is mandatory!
+    </div>
   </div>
   <button
     type="submit"
-    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    [disabled]="establishmentForm.invalid"
+    class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg w-full mt-10 text-sm px-5 py-2.5 text-center mr-2 mb-2"
   >
     Search
   </button>
