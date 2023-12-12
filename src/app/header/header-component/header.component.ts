@@ -17,19 +17,19 @@ export class HeaderComponent implements OnInit {
     private homeService: HomeService
   ) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.photoProfile = sessionStorage.getItem('photo')!;
   }
 
-  getName(): string {
+  public getName(): string {
     return this.homeService.userValues['name'];
   }
 
-  getEmail(): string {
+  public getEmail(): string {
     return this.homeService.userValues['email'];
   }
 
-  changeToSearch() {
+  public changeToSearch(): void {
     this.homeService.changeComponent('search');
   }
 

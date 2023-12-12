@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HeaderComponent } from './index';
+import { LoadingModule } from '../loading';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HeaderComponent } from './index';
     CommonModule,
     RouterModule,
     FontAwesomeModule,
+    LoadingModule
   ],
   exports: [
     HeaderComponent

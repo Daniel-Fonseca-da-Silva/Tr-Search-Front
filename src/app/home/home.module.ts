@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderModule } from '../header';
 import { SearchModule } from '../search';
 import { JumbotronModule } from '../jumbotron';
+import { SearchEstablishmentModule } from '../search-establishment';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { JumbotronModule } from '../jumbotron';
     HeaderModule,
     LoadingModule,
     SearchModule,
-    JumbotronModule
+    JumbotronModule,
+    SearchEstablishmentModule
   ],
   exports: [
     HomeComponent

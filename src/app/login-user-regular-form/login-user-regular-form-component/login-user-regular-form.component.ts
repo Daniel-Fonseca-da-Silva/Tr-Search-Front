@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { faHouseUser } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +11,7 @@ import { LoginUserRegularFormService } from './index';
   templateUrl: './login-user-regular-form.component.html',
   styleUrls: ['./login-user-regular-form.component.css'],
 })
-export class LoginUserRegularFormComponent {
+export class LoginUserRegularFormComponent implements OnInit {
   loginForm!: FormGroup;
   faHouseUser = faHouseUser;
 
@@ -22,14 +22,14 @@ export class LoginUserRegularFormComponent {
     private elementRef: ElementRef
   ) {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
 
-  existError(): boolean {
+  public existError(): boolean {
     if (this.loginService.existError) {
       return true;
     } else {
@@ -44,7 +44,7 @@ export class LoginUserRegularFormComponent {
     );
   }
 
-  public routerCreateUser() {
+  public routerCreateUser(): void {
     this.router.navigateByUrl('/create-regular-user');
     this.elementRef.nativeElement.remove();
   }

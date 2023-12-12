@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { HomeService } from 'src/app/home/home-component/home.service';
 
 @Component({
@@ -9,13 +8,9 @@ import { HomeService } from 'src/app/home/home-component/home.service';
 })
 export class JumbotronComponent {
 
-  constructor(private router: Router, private homeService: HomeService) {}
+  constructor(private homeService: HomeService) {}
 
-  onLinkClick(route: string) {
-    this.router.navigate([route]);
-  }
-
-  changeToSearch() {
+  public changeToSearch(): void {
     this.homeService.changeComponent('search');
   }
 

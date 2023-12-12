@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
   ) {}
 
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.kindUser = sessionStorage.getItem('role')!;
     this.getRoleUser();
     initFlowbite();
@@ -48,11 +48,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  getRoleUser(): void {
+  public getRoleUser(): void {
     this.homeService.get_user_info();
   }
 
-  getRoleCorporate(): boolean {
+  public getRoleCorporate(): boolean {
     if (this.kindUser == 'ROLE_CORPORATE') {
       return true;
     } else {
@@ -60,12 +60,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  routeToHome(): void {
+  public routeToHome(): void {
     this.router.navigateByUrl('/choose-router');
     this.elementRef.nativeElement.remove();
   }
 
-  changeToSearch() {
+  public changeToSearch(): void {
     this.pageWelcome = false;
     this.homeService.changeComponent('search');
   }

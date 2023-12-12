@@ -17,11 +17,11 @@ export class HomeService {
   private componentToShow = new BehaviorSubject<string>('default');
   componentToShow$ = this.componentToShow.asObservable();
 
-  changeComponent(componentName: string) {
+  public changeComponent(componentName: string): void {
     this.componentToShow.next(componentName);
   }
 
-  get_user_info() {
+  public get_user_info(): void {
     const token = sessionStorage.getItem('token');
     this.kindUser = sessionStorage.getItem('role')!;
 

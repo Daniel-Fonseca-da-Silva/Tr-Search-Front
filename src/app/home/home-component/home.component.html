@@ -83,6 +83,7 @@
     <ng-container *ngIf="homeService.componentToShow$ | async as component">
       <app-jumbotron *ngIf="component === 'welcome'"></app-jumbotron>
       <app-search *ngIf="component === 'search'"></app-search>
+      <app-search-establishment *ngIf="component === 'show-establishment'"></app-search-establishment>
     </ng-container>
   </div>
 </section>
