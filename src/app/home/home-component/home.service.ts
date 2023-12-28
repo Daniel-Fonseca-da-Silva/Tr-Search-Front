@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +14,14 @@ export class HomeService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  get_user_info() {
+  private componentToShow = new BehaviorSubject<string>('default');
+  componentToShow$ = this.componentToShow.asObservable();
+
+  public changeComponent(componentName: string): void {
+    this.componentToShow.next(componentName);
+  }
+
+  public get_user_info(): void {
     const token = sessionStorage.getItem('token');
     this.kindUser = sessionStorage.getItem('role')!;
 
@@ -29,8 +37,8 @@ export class HomeService {
           .subscribe({
             next: (response: any) => {
               this.userInfo = Object.values(response);
-                this.userValues['name'] = this.userInfo[0];
-                this.userValues['email'] = this.userInfo[2];
+              this.userValues['name'] = this.userInfo[0];
+              this.userValues['email'] = this.userInfo[2];
             },
           });
       } else {
