@@ -13,10 +13,11 @@ import { ChooseLoginModule } from './choose-login';
 import { HomeModule } from './home';
 import { LoadingModule } from './loading';
 import { LoadingInterceptor } from './loading/loading.interceptor';
+import { HeaderModule } from './header';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -26,10 +27,11 @@ import { LoadingInterceptor } from './loading/loading.interceptor';
     RouterModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    LoadingModule,
     LoginUserRegularFormModule,
     ChooseLoginModule,
-    HomeModule,
-    LoadingModule
+    HeaderModule,
+    HomeModule
   ],
   providers: [
     {

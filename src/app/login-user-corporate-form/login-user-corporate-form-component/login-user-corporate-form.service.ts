@@ -13,11 +13,11 @@ export class LoginUserCorporateFormService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  setAuthToken(token: string): void {
+  public setAuthToken(token: string): void {
     this.authToken = token;
   }
 
-  getAuthToken(): string {
+  public getAuthToken(): string {
     return this.authToken;
   }
 

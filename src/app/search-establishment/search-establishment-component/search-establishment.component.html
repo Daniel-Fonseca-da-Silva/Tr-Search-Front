@@ -1,0 +1,224 @@
+<app-loading></app-loading>
+<a
+  (click)="changeToSearch()"
+  class="max-w-md mt-5 text-gray-500 rounded-lg dark:text-white hover:bg-gray-100 hover:text-red-500 dark:hover:bg-gray-700 group"
+>
+  <fa-icon [icon]="faArrowLeft" class="ml-1"></fa-icon>
+  <span class="ml-3">Back</span>
+</a>
+<div *ngFor="let establishment of establishmentData | keyvalue" class="pb-2">
+  <div
+    class="bg-white border p-6 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  >
+    <form>
+      <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div
+          class="bg-white border p-6 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <img
+            class="rounded-lg"
+            [src]="establishment.value.photo"
+            alt="image description"
+          />
+        </div>
+        <div class="grid gap-6 mb-6 md:grid-cols-2">
+          <div>
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              [value]="establishment.value.name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Name"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="telephone"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Telephone</label
+            >
+            <input
+              type="text"
+              id="telephone"
+              [value]="establishment.value.telephone"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Telephone"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="cellphone"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Cellphone</label
+            >
+            <input
+              type="text"
+              id="cellphone"
+              [value]="establishment.value.cellphone"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Cellphone"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Email</label
+            >
+            <input
+              type="text"
+              id="email"
+              [value]="establishment.value.email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Email"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="category"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Category</label
+            >
+            <input
+              type="text"
+              id="category"
+              placeholder="Category"
+              [value]="establishment.value.category"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="city"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >City</label
+            >
+            <input
+              type="text"
+              id="city"
+              placeholder="City"
+              [value]="establishment.value.city"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="district"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >City</label
+            >
+            <input
+              type="text"
+              id="district"
+              placeholder="District"
+              [value]="establishment.value.district"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="street"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Street</label
+            >
+            <input
+              type="text"
+              id="street"
+              placeholder="Street"
+              [value]="establishment.value.street"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="district"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >District</label
+            >
+            <input
+              type="text"
+              id="district"
+              placeholder="District"
+              [value]="establishment.value.district"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="number"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Number</label
+            >
+            <input
+              type="text"
+              id="number"
+              placeholder="Number"
+              [value]="establishment.value.number"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="state"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >State</label
+            >
+            <input
+              type="text"
+              id="state"
+              placeholder="State"
+              [value]="establishment.value.state"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              disabled
+            />
+          </div>
+          <div>
+            <label
+              for="zipcode"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Zipcode</label
+            >
+            <input
+              type="text"
+              id="zipcode"
+              placeholder="Zipcode"
+              [value]="establishment.value.zipCode"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          for="description"
+          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+          >Description</label
+        >
+        <textarea
+          id="description"
+          rows="4"
+          disabled
+          [value]="establishment.value.description"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Description of establishment"
+        ></textarea>
+      </div>
+    </form>
+  </div>
+</div>

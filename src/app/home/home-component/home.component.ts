@@ -29,36 +29,30 @@ export class HomeComponent implements OnInit {
   faScrewdriverWrench = faScrewdriverWrench;
   faUser = faUser;
   faMagnifyingGlass = faMagnifyingGlass;
-  photoProfile: string =
-    'https://images.pexels.com/photos/259239/pexels-photo-259239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
   kindUser!: string;
+  pageWelcome: boolean = true;
 
   constructor(
     private router: Router,
     private elementRef: ElementRef,
-    private homeService: HomeService
+    protected homeService: HomeService
   ) {}
 
-  ngOnInit(): void {
+
+  public ngOnInit(): void {
     this.kindUser = sessionStorage.getItem('role')!;
-    this.photoProfile = sessionStorage.getItem('photo')!;
     this.getRoleUser();
     initFlowbite();
+    if(this.pageWelcome == true) {
+      this.homeService.changeComponent('welcome');
+    }
   }
 
-  getName(): string {
-    return this.homeService.userValues['name'];
-  }
-
-  getEmail(): string {
-    return this.homeService.userValues['email'];
-  }
-
-  getRoleUser(): void {
+  public getRoleUser(): void {
     this.homeService.get_user_info();
   }
 
-  getRoleCorporate(): boolean {
+  public getRoleCorporate(): boolean {
     if (this.kindUser == 'ROLE_CORPORATE') {
       return true;
     } else {
@@ -66,8 +60,14 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  routeToHome(): void {
+  public routeToHome(): void {
     this.router.navigateByUrl('/choose-router');
     this.elementRef.nativeElement.remove();
   }
+
+  public changeToSearch(): void {
+    this.pageWelcome = false;
+    this.homeService.changeComponent('search');
+  }
+
 }
