@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchEstablishmentComponent } from './search-establishment-component';
 import { LoadingModule } from '../loading';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -11,6 +12,7 @@ import { LoadingModule } from '../loading';
   ],
   imports: [
     CommonModule,
+    FontAwesomeModule,
     LoadingModule
   ],
   exports: [
