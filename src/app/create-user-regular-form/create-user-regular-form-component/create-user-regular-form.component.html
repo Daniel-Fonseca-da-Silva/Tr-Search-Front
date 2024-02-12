@@ -163,6 +163,174 @@
               Birthday is mandatory!
             </div>
           </div>
+
+          <!-- City -->
+          <div>
+            <label
+              for="city"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >City</label
+            >
+            <input
+              type="text"
+              id="city"
+              name="city"
+              formControlName="city"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="City"
+              required
+            />
+            <div
+              *ngIf="createform.get('city')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              City is mandatory!
+            </div>
+            <div
+              *ngIf="createform.get('city')?.hasError('minlength')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              City invalid!
+            </div>
+          </div>
+          <!-- Number -->
+          <div>
+            <label
+              for="number"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Number</label
+            >
+            <input
+              type="number"
+              id="number"
+              name="number"
+              formControlName="number"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="0000"
+              required
+            />
+            <div
+              *ngIf="createform.get('number')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Number is mandatory!
+            </div>
+          </div>
+          <div>
+            <!-- State -->
+            <label
+              for="state"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >State</label
+            >
+            <select
+              id="state"
+              name="state"
+              formControlName="state"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option
+                *ngFor="let option of stateOptions"
+                [value]="option.value"
+              >
+                {{ option.label }}
+              </option>
+            </select>
+            <div
+              *ngIf="createform.get('state')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              State is mandatory!
+            </div>
+          </div>
+          <!-- District -->
+          <div>
+            <label
+              for="district"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >District</label
+            >
+            <input
+              type="text"
+              id="district"
+              name="district"
+              formControlName="district"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="District"
+              required
+            />
+            <div
+              *ngIf="createform.get('district')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              District is mandatory!
+            </div>
+            <div
+              *ngIf="createform.get('district')?.hasError('minlength')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              District invalid!
+            </div>
+          </div>
+          <!-- Street -->
+          <div>
+            <label
+              for="street"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Street</label
+            >
+            <input
+              type="text"
+              id="street"
+              name="street"
+              formControlName="street"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Street"
+              required
+            />
+            <div
+              *ngIf="createform.get('street')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Street is mandatory!
+            </div>
+            <div
+              *ngIf="createform.get('street')?.hasError('minlength')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Street invalid!
+            </div>
+          </div>
+          <!-- Zipcode -->
+          <div>
+            <label
+              for="zipCode"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Zipcode</label
+            >
+            <input
+              type="text"
+              id="zipCode"
+              name="zipCode"
+              formControlName="zipCode"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Zipcode"
+              required
+            />
+            <div
+              *ngIf="createform.get('zipCode')?.hasError('required')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Zipcode is mandatory!
+            </div>
+            <div
+              *ngIf="createform.get('zipCode')?.hasError('minlength')"
+              class="mt-1 bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-2 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400"
+            >
+              Zipcode invalid!
+            </div>
+          </div>
+
         </div>
         <!-- Email -->
         <div class="mb-6">

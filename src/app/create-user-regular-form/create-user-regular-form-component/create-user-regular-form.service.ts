@@ -18,7 +18,13 @@ export class CreateUserRegularFormService {
     documentation: string,
     photo: string,
     birthday: string,
-    gender: string
+    gender: string,
+    city: string,
+    number: string,
+    state: string,
+    district: string,
+    street: string,
+    zipCode: string
   ): void {
     const postData = {
       name,
@@ -29,6 +35,12 @@ export class CreateUserRegularFormService {
       photo,
       birthday,
       gender,
+      city,
+      number,
+      state,
+      district,
+      street,
+      zipCode
     };
 
     this.http.post('http://localhost:8080/api/v1/users', postData).subscribe({
@@ -36,7 +48,7 @@ export class CreateUserRegularFormService {
         this.router.navigate(['/choose-router']);
       },
       error: (error) => {
-        console.error('FALEID ATTEMPT TO LOGIN PAGE', error);
+        console.error('Failed to register user', error);
       },
     });
   }
