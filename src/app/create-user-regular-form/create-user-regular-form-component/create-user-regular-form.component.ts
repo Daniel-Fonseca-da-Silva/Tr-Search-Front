@@ -1,14 +1,15 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { faTrashCan, faHouseUser } from '@fortawesome/free-solid-svg-icons';
 
 import { CreateUserRegularFormService } from './index';
+import { StateService } from 'src/app/sharing';
 
 @Component({
   selector: 'app-create-user-regular-form-component',
-  templateUrl: './create-user-regular-form-component.html',
-  styleUrls: ['./create-user-regular-form-component.css'],
+  templateUrl: './create-user-regular-form.component.html',
+  styleUrls: ['./create-user-regular-form.component.css'],
 })
 export class CreateUserRegularFormComponent {
 
@@ -20,6 +21,7 @@ export class CreateUserRegularFormComponent {
   constructor(
     private fb: FormBuilder,
     private service: CreateUserRegularFormService,
+    private stateService: StateService
   ) {}
 
   ngOnInit(): void {
@@ -33,8 +35,18 @@ export class CreateUserRegularFormComponent {
       photo: [''],
       birthday: ['', [Validators.required]],
       gender: ['', [Validators.required]],
-      conditions: ['', [Validators.required]]
+      state: ['', [Validators.required]],
+      conditions: ['', [Validators.required]],
+      city: ['', [Validators.required]],
+      number: ['', [Validators.required]],
+      district: ['', [Validators.required]],
+      street: ['', [Validators.required]],
+      zipCode: ['', [Validators.required]]
     });
+  }
+
+  public get stateOptions(): any {
+    return this.stateService.getStateOptions();
   }
 
   onSubmitCreateRegularUser(): void {
@@ -52,6 +64,12 @@ export class CreateUserRegularFormComponent {
       this.createform.get('photo')?.value,
       this.createform.get('birthday')?.value,
       this.createform.get('gender')?.value,
+      this.createform.get('city')?.value,
+      this.createform.get('number')?.value,
+      this.createform.get('state')?.value,
+      this.createform.get('district')?.value,
+      this.createform.get('street')?.value,
+      this.createform.get('zipCode')?.value,
       );
   }
 
@@ -60,7 +78,7 @@ export class CreateUserRegularFormComponent {
   }
 
   public resetForm(): void {
-    this.createform.reset();  
+    this.createform.reset();
   }
 
 }
